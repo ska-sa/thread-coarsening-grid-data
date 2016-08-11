@@ -22,10 +22,26 @@ The data type in the dataset is a compound type with the following fields:
 - `vis`: a complex visibility (a single-element array).
 - `w_plane`: w coordinate, quantised to a W plane.
 
-This does not encode enough information to actually produce a useful
+## Parameters
+
+The file does not encode enough information to actually produce a useful
 astronomical image, since it lacks all information about the grid sampling
 rate, frequency, pointing, w planes etc. It is intended purely for
 apples-to-apples benchmarking of gridding algorithms.
+
+For completeness, here are the parameters used in the simulation:
+- Phase centre: RA 0, Declination -45°
+- Start time: Sat Jan  1 12:00:00 UTC 2000
+- Integration time: 2 seconds
+- Duration: 7200 seconds
+- Frequency: 1.412 GHz
+- UV cell size: 5.568m
+- Pixel size: 1.707 arcsec
+- Image size: 4608 × 4608
+- W planes per W slice: 1229
+
+The weights and visibilities are all set to 1, so an image will contain a point
+source at the phase centre.
 
 ## Licence
 
